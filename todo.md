@@ -1,18 +1,14 @@
 markdown
-# CSS File TODO List
 
-## 🔴 HIGH PRIORITY
-
-- [ ] REMOVE TINA CMS STUFF FROM NODE MODULES
-- [x] Remove node_modules
-- [x] contact form
+- [ ] SEO
+- [ ] cloudflare js just needs to be on contact form
 - [ ] delete unused fonts
 - [ ] sticky header
+- [ ] check for reusability as a template
+- [ ] check pico vars
 
-### 1. Define Missing Variable
+### 1. Define Missing Variables
 - [ ] Define $max-width variable (currently referenced in commented code but never declared)
-- [ ] Location: container section - //max-width: $max-width;
-- [ ] Suggested value: $max-width: 1200px;
 
 ### 2. Remove Duplicate Code
 - [ ] Remove duplicate $title-align declaration (appears twice - lines 20 and 28)
@@ -22,30 +18,7 @@ markdown
 - [ ] Fix or remove commented $max-width reference in container rule
 - [ ] Uncomment container width rule after defining variable
 
-### 4. PICO Integration
-- [ ] Import PICO for customisation (TODO comment at top of file)
-- [ ] Add: @import "pico";
-- [ ] Ensure PICO doesn't conflict with existing styles
-
 ## 🟡 MEDIUM PRIORITY
-
-### 5. Icon Color Management
-- [ ] Implement dynamic icon coloring (currently uses hardcoded white fill in SVGs)
-- [ ] Options:
-  - Use CSS filter property
-  - Use SVG currentColor approach
-  - Use mask-image technique
-- [ ] Uncomment and implement TODO in icon-email section
-
-### 6. Container Width Customization
-- [ ] Uncomment and test container width rule:
-.container,
-main.container {
-//max-width: $max-width;
-}
-
-text
-- [ ] Test across different viewport sizes after uncommenting
 
 ### 7. Code Organization
 - [ ] Refactor into partials:
@@ -56,14 +29,7 @@ text
 - _components.scss
 - _footer.scss
 
-### 8. Review Selector Specificity
-- [ ] Check if body > header could be simplified to just header
-- [ ] Consider if nav.primary could be simplified
-- [ ] Review nested selectors for over-specificity
-
-## 🟢 LOW PRIORITY
-
-### 9. CSS Architecture
+## 9. CSS Architecture
 - [ ] Adopt BEM naming convention for better maintainability
 - [ ] Current classes needing review:
 - .title-container → .title__container
@@ -100,7 +66,7 @@ text
 - [ ] Ensure footer links match design system
 - [ ] Test all interactive elements (buttons, links, form elements)
 
-## 🔍 TESTING CHECKLIST
+ss## 🔍 TESTING CHECKLIST
 
 - [ ] Test 1536px breakpoint container override
 - [ ] Verify navigation alignment (currently center)
@@ -134,6 +100,5 @@ text
 
 - The PICO import comment at the top indicates planned integration
 - Color variables use both UK and US spelling (colour/color) - consider standardizing
-- Some rules use !important (none found) - avoid if possible
 - Consider using CSS Grid for layout instead of flex where appropriate
 

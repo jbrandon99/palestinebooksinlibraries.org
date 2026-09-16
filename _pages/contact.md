@@ -34,6 +34,8 @@ title: Contact
     Message
     <textarea id="message" name="message" rows="4" placeholder="Your message..." required minlength="2"></textarea>
   </label>
-
+  
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAAE5D0u7BupHRwooS"></div>
   <button type="submit">Send</button>
 </form>
+
