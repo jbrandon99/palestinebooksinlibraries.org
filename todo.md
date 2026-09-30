@@ -1,6 +1,9 @@
 markdown
 
 - [ ] SEO
+- [ ] Shorten front page content?
+- [ ] Replace book list (see palestinian literature festival)
+- [ ] left alignment of content issues
 - [ ] cloudflare js just needs to be on contact form
 - [ ] delete unused fonts
 - [ ] sticky header

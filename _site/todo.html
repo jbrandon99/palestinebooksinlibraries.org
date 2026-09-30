@@ -18,6 +18,10 @@
 	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
 	<!-- Safari Pinned Tab -->
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#007AFF">
+
+    <!-- ONLY NEED ON CONTACT PAGE -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    
     <script type="text/javascript">
         function setTheme(theme) {
           document.documentElement.setAttribute('data-theme', theme);
@@ -200,23 +204,20 @@
   		</head>
   		<content class="wysiwyg-content">
   			<p>markdown</p>
-<h1 id="css-file-todo-list">CSS File TODO List</h1>
-
-<h2 id="-high-priority">🔴 HIGH PRIORITY</h2>
 
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />REMOVE TINA CMS STUFF FROM NODE MODULES</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Remove node_modules</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />contact form</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />SEO</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />left alignment of content issues</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />cloudflare js just needs to be on contact form</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />delete unused fonts</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />sticky header</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />check for reusability as a template</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />check pico vars</li>
 </ul>
 
-<h3 id="1-define-missing-variable">1. Define Missing Variable</h3>
+<h3 id="1-define-missing-variables">1. Define Missing Variables</h3>
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Define $max-width variable (currently referenced in commented code but never declared)</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Location: container section - //max-width: $max-width;</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Suggested value: $max-width: 1200px;</li>
 </ul>
 
 <h3 id="2-remove-duplicate-code">2. Remove Duplicate Code</h3>
@@ -231,41 +232,7 @@
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Uncomment container width rule after defining variable</li>
 </ul>
 
-<h3 id="4-pico-integration">4. PICO Integration</h3>
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Import PICO for customisation (TODO comment at top of file)</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Add: @import “pico”;</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Ensure PICO doesn’t conflict with existing styles</li>
-</ul>
-
 <h2 id="-medium-priority">🟡 MEDIUM PRIORITY</h2>
-
-<h3 id="5-icon-color-management">5. Icon Color Management</h3>
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Implement dynamic icon coloring (currently uses hardcoded white fill in SVGs)</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Options:
-    <ul>
-      <li>Use CSS filter property</li>
-      <li>Use SVG currentColor approach</li>
-      <li>Use mask-image technique</li>
-    </ul>
-  </li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Uncomment and implement TODO in icon-email section</li>
-</ul>
-
-<h3 id="6-container-width-customization">6. Container Width Customization</h3>
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Uncomment and test container width rule:
-.container,
-main.container {
-//max-width: $max-width;
-}</li>
-</ul>
-
-<p>text</p>
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Test across different viewport sizes after uncommenting</li>
-</ul>
 
 <h3 id="7-code-organization">7. Code Organization</h3>
 <ul class="task-list">
@@ -278,16 +245,7 @@ main.container {
   <li class="task-list-item">_footer.scss</li>
 </ul>
 
-<h3 id="8-review-selector-specificity">8. Review Selector Specificity</h3>
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Check if body &gt; header could be simplified to just header</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Consider if nav.primary could be simplified</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Review nested selectors for over-specificity</li>
-</ul>
-
-<h2 id="-low-priority">🟢 LOW PRIORITY</h2>
-
-<h3 id="9-css-architecture">9. CSS Architecture</h3>
+<h2 id="9-css-architecture">9. CSS Architecture</h2>
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Adopt BEM naming convention for better maintainability</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Current classes needing review:</li>
@@ -336,7 +294,7 @@ main.container {
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Test all interactive elements (buttons, links, form elements)</li>
 </ul>
 
-<h2 id="-testing-checklist">🔍 TESTING CHECKLIST</h2>
+<p>ss## 🔍 TESTING CHECKLIST</p>
 
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Test 1536px breakpoint container override</li>
@@ -375,7 +333,6 @@ main.container {
 <ul>
   <li>The PICO import comment at the top indicates planned integration</li>
   <li>Color variables use both UK and US spelling (colour/color) - consider standardizing</li>
-  <li>Some rules use !important (none found) - avoid if possible</li>
   <li>Consider using CSS Grid for layout instead of flex where appropriate</li>
 </ul>
 
